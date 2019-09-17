@@ -1,4 +1,35 @@
-body {
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
     background-image: url(https://images.wisegeek.com/man-in-tie-stacking-three-piles-of-large-bills.jpg);
     background-size: cover;
+    height: 100%;
+}
+.register {
+    width: 25%;
+    text-align: center;
+    margin: auto;
+
+}
+.LoginPage {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5% 0;
+    height: 100%;
+}
+.company {
+    color: rgb(0, 183, 255);
+    padding: 0%;
+}
+.payment {
+    padding: 2%;
+    color: rgb(0, 183, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.admin {
+    padding: 4%;
+    color: rgb(0, 183, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
