@@ -60,3 +60,14 @@ $('.signing').click(function(event) {
       username: usernamelogin,
       password: passwordlogin,
     },
+    success: function(response) {
+      if (response.length) {
+        $('.writeup').html('Login successful');
+        localStorage.setItem('username', usernamelogin);
+        window.location.assign('payroll.html');
+      } else {
+        $('.writeup').html('Username or password Incorrect');
+      }
+    },
+  });
+});
