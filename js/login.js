@@ -53,3 +53,10 @@ $('.signing').click(function(event) {
     $('.writeup').html('Kindly fill in all fields');
     return;
   }
+  $.ajax({
+    method: 'GET',
+    url: `http://localhost:3000/users?username=${usernamelogin}&password=${passwordlogin}`,
+    data: {
+      username: usernamelogin,
+      password: passwordlogin,
+    },
