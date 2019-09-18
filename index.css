@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+html, body {
+    background-image: url(https://images.wisegeek.com/man-in-tie-stacking-three-piles-of-large-bills.jpg);
+    background-size: contain;
+    height: 100%;
+}
+.register {
+    width: 25%;
+    text-align: center;
+    margin: auto;
+
+}
+.LoginPage {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5% 0;
+    height: 100%;
+}
+.company {
+    color: rgb(0, 183, 255);
+    padding: 0%;
+    font-size: 40px;
+}
+.payment {
+    padding: 2%;
+    color: rgb(0, 183, 255);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.admin {
+    padding: 4%;
+    color: rgb(0, 183, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.Form input {
+    font-family: 'Times New Roman', Times, serif;
+    outline: 1;
+    background: rgb(0, 183, 255);
+    width: 100%;
+    border: 0, thick;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    text-align: center;
+}
+.Form button {
+    font-family: 'Times New Roman', Times, serif;
+    outline: 0;
+    background: rgb(40, 94, 40);
+    width: 100%;
+    border: 0, thick;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+}
+.login {
+    width: 25%;
+    text-align: center;
+    margin: auto;
+}
+.Form button:hover, .Form button:active {
+    background: #43A047;
+}  
+.Form .message {
+    font-family: 'Times New Roman', Times, serif;
+    outline: 0;
+    color: aliceblue;
+    width: 100%;
+    border: 0, thick;
+    margin: 10px 0 0;
+    font-size: 20px;
+}
+.Form .message a{
+    color: 4CAF50;
+    text-decoration: none;
+}
+.Form .register{
+    display: none;
+}

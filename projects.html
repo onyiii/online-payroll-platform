@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./index.css"/>
+    <title>Online Payroll System</title>
+</head>
+<body>
+  <div class="LoginPage">
+    <h1 class="company">SUPREME MEDICAL CENTRE</h1>
+    <h2 class="payment">PAYROLL PLATFORM</h2>
+    <p class="writeup"></p>
+    <h1 class="admin">Admin LogIn</h1>
+    <p class="SignIn"></p>
+    <div class="Form">
+    <form class="register">
+      <input type="text" name="Fullname" id="fullname" placeholder="Full Name"/>
+      <input type="text" name="username" id="username" placeholder="Username"/>
+     <input type="email" name="email" 
+      id="email" placeholder="Email Address" required/>
+      <input type="password" name="password" 
+      id="password" placeholder="Password" minlength="6" maxlength="12" required>
+      <button class="create">CREATE</button>
+      <p class="message"><strong>Already Registered? </strong><a href="#">Log In</a></p>
+      </form>
+    <form class="login">
+    <input type="text" name="Username" 
+    id="usernamelogin" placeholder="Username" required/>
+      <input type="password" name="password" 
+      id="passwordlogin" placeholder="password" minlength="6" maxlength="12" required>
+      <button class="signing">Sign In</button>
+      <p class="message"><strong>Not Registered?</strong> <a href="#">Register</a></p>
+    </form>
+  </div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/login.js"></script>
+</body>
+</html>
