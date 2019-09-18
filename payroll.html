@@ -4,13 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="./payroll.css"/>
     <title>payroll table</title>
 </head>
 <body>
-    <div class="container">
+        <div class="container">
+                <div class="row">
+                  <h2 class="text-center">
+                    Payroll Sheet
+                  </h2>
+                  <div class="col-md-7">
+                    <button class="btn btn-danger" id="remove">
+                      <i class="glyphicon glyphicon-remove"></i>
+                    </button>
+                    <table id="realtime" class="display" width="100%"></table>
+        </div>
+
     <div class="tab-1">
-        <table id="table" border="1">
+        <table class="table table-bordered data-table" border="1">
          <thead>
             <tr>
                 <th>Full Name</th>
@@ -37,11 +50,12 @@
                 Level:  <input type="text" name="Level" id="Level" placeholder="Level"/>
                 Salary:  <input type="text" name="Salary" id="Salary" placeholder="Salary"/>
                 
-                <button class="create">Create</button>
+                <button type="submit" class="btn btn-success save-btn">Create</button>
                 
              </form>
          </div>
     </div>
+    <script src="./js/jquery.js"></script>
     <script src="./js/payroll.js"></script>
 </body>
 </html>

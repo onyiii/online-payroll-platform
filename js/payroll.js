@@ -1,11 +1,7 @@
-function addHtmlTableRow() {
-    let table = document.getElementById('table'),
-    newRow = table.insertRow(table.length),
-    cell1 = newRow.insertRowCell(0),
-    cell2 = newRow.insertRowCell(1),
-    cell3 = newRow.insertRowCell(2),
-    cell4 = newRow.insertRowCell(3),
-    cell5 = newRow.insertRowCell(5),;
-}
-// table
-$
+$("form").submit(function(e){
+    e.preventDefault();
+    const fullname = $("input[Full Name='fullname']").val();
+    const qualification = $("input[Qualification='qualification']").val();
+    const role = $("input[Role='role']").val();
+    const level = $("input[Level='level']").val();
+    const salary = $("input[Salary='salary']").val();

@@ -17,7 +17,7 @@ body {
     width: 360px;
     padding: 10px;
 }
-#table {
+.table {
     table-layout: auto;
     width: 50%;
     
