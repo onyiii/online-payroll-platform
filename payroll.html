@@ -15,26 +15,22 @@
                   <h2 class="text-center">
                     Payroll Sheet
                   </h2>
-                  <div class="col-md-7">
-                    <button class="btn btn-danger" id="remove">
-                      <i class="glyphicon glyphicon-remove"></i>
-                    </button>
+                  <input id="myInput" type="text" placeholder="Search..">
+                 <br><br>
                     <table id="realtime" class="display" width="100%"></table>
         </div>
-
-    <div class="tab-1">
+        <div class="tab-1">
         <table class="table table-bordered data-table" border="1">
          <thead>
             <tr>
-                <th>Full Name</th>
-                <th>Qualification</th>
-                <th>Role</th>
-                <th>Level</th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Start Date</th>
                 <th>Salary</th>
                 <th width = "100px">Action</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody id="myTable">
             
         </tbody>
             
@@ -42,20 +38,53 @@
         </table>
 
     </div>
-         <div class="tab-2">
-             <form>
-                Full Name:  <input type="text" name="Fullname" id="fname" placeholder="Full Name"/>
-                Qualification:  <input type="text" name="Qualification" id="Qualification" placeholder="Qualification"/>
-                Role:  <input type="text" name="Role" id="Role" placeholder="Role"/>
-                Level:  <input type="text" name="Level" id="Level" placeholder="Level"/>
-                Salary:  <input type="text" name="Salary" id="Salary" placeholder="Salary"/>
-                
-                <button type="submit" class="btn btn-success save-btn">Create</button>
-                
-             </form>
-         </div>
+        <div class= " tab-2">
+                <h2 class="regMessage"></h2>
+                <h3 class="text-center">Create New Employee</h3>
+                <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="position">Position</label>
+                  <select name="position" id="position" class="form-control">
+                    <option value="">--Select Position--</option>
+                    <option value="General Practitioner">General Practitioner</option>
+                    <option value="Consultant">Consultant</option>
+                    <option value="Registered Nurse">Registered Nurse</option>
+                    <option value="Midwife">Midwife</option>
+                    <option value="Front Desk">Front Desk</option>
+                    <option value="Admin/Hr">Admin/Hr</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="HMO Officer">HMO Officer</option>
+                  </select>
+                </div>
+            
+
+                <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" name="startDate" id="startDate" placeholder="Start Date" class="form-control">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="salary">Salary</label>
+                        <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <button class="btn btn-info" id="add">Create</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+         
     </div>
     <script src="./js/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.js"></script>
+    <script src="https://js.pusher.com/4.1/pusher.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.15/api/row().show().js"></script>
+    <script src="data.js"></script>
     <script src="./js/payroll.js"></script>
 </body>
 </html>
