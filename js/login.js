@@ -12,8 +12,7 @@ $(document).ready(function() {
         $('.writeup').html('Kindly fill in all fields');
         return;
       }
-      
-    $.ajax({
+      $.ajax({
         method: 'GET',
         url: `http://localhost:3000/users?email=${email}`,
         data: {
@@ -35,5 +34,14 @@ $(document).ready(function() {
               },
     
               success: function() {
-              $('.writeup').html('Registered');}
-});
+              $('.writeup').html('Registered');
+            
+            }
+        })  
+       }
+      }
+    })
+     
+  })
+})
+
