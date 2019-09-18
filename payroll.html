@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./payroll.css"/>
     <title>payroll table</title>
 </head>
 <body>
     <div class="container">
-    <div class="tab tab-1">
+    <div class="tab-1">
         <table id="table" border="1">
             <tr>
                 <th>S/N</th>
@@ -22,15 +23,18 @@
                 <th>Total</th>
 
             </tr>
+            
 
         </table>
 
     </div>
-         <div class="input">
+         <div class="tab-2">
              <form>
                 Full Name:  <input type="text" name="Fullname" id="fname" placeholder="Full Name"/>
                 Qualification:  <input type="text" name="Qualification" id="Qualification" placeholder="Qualification"/>
                 Role:  <input type="text" name="Role" id="Role" placeholder="Role"/>
+                Level:  <input type="text" name="Level" id="Level" placeholder="Level"/>
+                Account No:  <input type="text" name="Account No" id="Account" placeholder="Account No"/>
                 
                 <button>Create</button>
                 <button>Delete</button>
@@ -38,5 +42,6 @@
              </form>
          </div>
     </div>
+    <script src="./js/payroll.js"></script>
 </body>
 </html>

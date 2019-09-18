@@ -1,1 +1,1 @@
-
+function addHtmlTableRow() {

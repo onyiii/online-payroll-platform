@@ -1,0 +1,17 @@
+body {
+    background-color: gray;
+}
+.container {
+    overflow: hidden;
+}
+
+.tab-2 {
+    float: right;
+    margin-right: 150px;
+
+}
+.tab-2 input {
+    display: block;
+    margin-bottom: 10px;
+    width: 360px;
+}
