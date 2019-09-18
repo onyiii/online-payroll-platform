@@ -45,3 +45,11 @@ $(document).ready(function() {
   })
 })
 
+$('.signing').click(function(event) {
+  event.preventDefault();
+  const passwordlogin = $('#passwordlogin').val();
+  const usernamelogin = $('#usernamelogin').val();
+  if (!passwordlogin || !usernamelogin) {
+    $('.writeup').html('Kindly fill in all fields');
+    return;
+  }
