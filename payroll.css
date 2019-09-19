@@ -2,14 +2,16 @@ body {
     background-color: rgb(79, 173, 126)
 }
 .container {
-    overflow: hidden;
+    overflow: scroll;
 }
+
 
 .tab-2 {
     float: right;
     margin-bottom: 5%;
-    margin-right: 150px;
+    margin-right: 50px;
     font-size: 20px;
+    margin-top: -100px;
 
 }
 .tab-2 input {

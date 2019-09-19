@@ -1,26 +1,6 @@
 {
   "users": [
-    {
-      "fullname": "onyinye chukwuma",
-      "username": "onyii",
-      "email": "diamonddennis95@yahoo.com",
-      "password": "onyinye",
-      "id": 1
-    },
-    {
-      "fullname": "chidimns",
-      "username": "hhhh",
-      "email": "diamondden@yahoo.com",
-      "password": "jjkijfiei",
-      "id": 2
-    },
-    {
-      "fullname": "kate",
-      "username": "hiimmdc",
-      "email": "ghjk@yahoo.com",
-      "password": "jdjdjd",
-      "id": 3
-    }
+    
   ]
 }
 
