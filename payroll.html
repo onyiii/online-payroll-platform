@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./payroll.css"/>
+    <title>payroll table</title>
+</head>
+<body>
+        <div class="container">
+                <div class="row">
+                  <h2 class="text-center">
+                    Payroll Sheet
+                  </h2>
+                  <input id="myInput" type="text" placeholder="Search..">
+                 <br><br>
+                    <table id="realtime" class="display" width="100%"></table>
+        </div>
+        <div class="tab-1">
+        <table class="table table-bordered data-table" border="1">
+         <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Start Date</th>
+                <th>Salary</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="myTable">
+            
+        </tbody>
+            
+
+        </table>
+
+    </div>
+        <div class= "tab-2">
+                <h2 class="regMessage" style="color: brown"></h2>
+                <h3 class="text-center"><strong>Create New Employee</strong></h3>
+                <form>
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                </div>
+                <div class="form-group">
+                  <label for="position">Position</label>
+                  <select name="position" id="position" class="form-control">
+                    <option value="">--Select Position--</option>
+                    <option value="General Practitioner">General Practitioner</option>
+                    <option value="Consultant">Consultant</option>
+                    <option value="Registered Nurse">Registered Nurse</option>
+                    <option value="Midwife">Midwife</option>
+                    <option value="Front Desk">Front Desk</option>
+                    <option value="Admin/Hr">Admin/Hr</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="HMO Officer">HMO Officer</option>
+                  </select>
+                </div>
+            
+
+                <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="date" name="startDate" id="startDate" placeholder="Start Date" class="form-control">
+                      </div>
+                      
+                      <div class="form-group">
+                        <label for="salary">Salary</label>
+                        <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control">
+                      </div>
+                      <div class="form-group">
+                        <button class="btn btn-info" id="add">Create</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+         
+    </div>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/payroll.js"></script>
+</body>
+</html>

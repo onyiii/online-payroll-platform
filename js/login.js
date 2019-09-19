@@ -45,3 +45,29 @@ $(document).ready(function() {
   })
 })
 
+$('.signing').click(function(event) {
+  event.preventDefault();
+  const passwordlogin = $('#passwordlogin').val();
+  const usernamelogin = $('#usernamelogin').val();
+  if (!passwordlogin || !usernamelogin) {
+    $('.writeup').html('Kindly fill in all fields');
+    return;
+  }
+  $.ajax({
+    method: 'GET',
+    url: `http://localhost:3000/users?username=${usernamelogin}&password=${passwordlogin}`,
+    data: {
+      username: usernamelogin,
+      password: passwordlogin,
+    },
+    success: function(response) {
+      if (response.length) {
+        $('.writeup').html('Login successful');
+        localStorage.setItem('username', usernamelogin);
+        window.location.assign('payroll.html');
+      } else {
+        $('.writeup').html('Username or password Incorrect');
+      }
+    },
+  });
+});

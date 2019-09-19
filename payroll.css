@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(79, 173, 126)
+}
+.container {
+    overflow: scroll;
+}
+
+
+.tab-2 {
+    float: right;
+    margin-bottom: 5%;
+    margin-right: 50px;
+    font-size: 20px;
+    margin-top: -100px;
+
+}
+.tab-2 input {
+    display: block;
+    margin-bottom: 10px;
+    width: 360px;
+    padding: 10px;
+}
+.table {
+    table-layout: auto;
+    width: 50%;
+    
+}
+.tab-2 button {
+    font-family: 'Times New Roman', Times, serif;
+    outline: 0;
+    background: rgb(40, 94, 40);
+    width: 20%;
+    border: 0, thick;
+    padding: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor: pointer;
+}
