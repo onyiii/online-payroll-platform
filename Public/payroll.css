@@ -1,5 +1,6 @@
 body {
-    background-color: rgb(79, 162, 173)
+    background-color: rgb(79, 162, 173);
+    overflow-x: hidden;
 }
 .container {
     overflow: hidden;
@@ -13,7 +14,6 @@ img {
     width:30%;
     margin-top: 50px;
     height: 500px;
-    border-radius: 10px;
 
 } 
 #myInput {
@@ -56,4 +56,15 @@ table tr, table th{
     box-sizing: border-box;
     font-size: 20px;
     cursor: pointer;
+}
+  #pay  {
+    font-family: 'Times New Roman', Times, serif;
+    background: wheat;
+    width: 80px;
+    border: 0, thick;
+    padding: 2px;
+    box-sizing: border-box;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 900px;
 }

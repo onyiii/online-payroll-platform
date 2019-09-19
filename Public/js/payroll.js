@@ -25,7 +25,15 @@ $(document).ready(function(){
             position,
             startDate,
             salary
-          }
+          },
+          success: function(){
+            $.get("http://localhost:3000/records",function(data, status){
+      data.forEach(record=>{ 
+        $("#myTable").append(`<tr ><td value ="${record.name}">${record.name}</td><td value ="${record.position}">"${record.position}"</td><td value ="${record.startDate}">${record.startDate}</td><td value ="${record.salary}">${record.salary}</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td><td><button type="button" onclick="payWithPaystack()"> Pay </button> </td></tr>`);}) 
+  } 
+
+    )
+           }
         }
        ) 
      }   
@@ -37,12 +45,7 @@ $(document).ready(function(){
     $('#startDate').val('');
     $('#salary').val('');
 });
-$.get("http://localhost:3000/records",function(data, status){
-      data.forEach(record=>{ 
-        $("#myTable").append(`<tr ><td value ="${record.name}">${record.name}</td><td value ="${record.position}">"${record.position}"</td><td value ="${record.startDate}">${record.startDate}</td><td value ="${record.salary}">${record.salary}</td><td><button class='btn btn-info btn-xs btn-edit'>Edit</button><button class='btn btn-danger btn-xs btn-delete'>Delete</button></td></tr>`);}) 
-  } 
 
-    )
 
 $("body").on("click", ".btn-delete", function(){
     $(this).parents("tr").remove();
@@ -101,4 +104,32 @@ $("body").on("click", ".btn-update", function(){
     $(this).parents("tr").find(".btn-edit").show();
     $(this).parents("tr").find(".btn-cancel").remove();
     $(this).parents("tr").find(".btn-update").remove();
-});
+
+    
+    
+  });
+ 
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_test_87976b2349a2778f7d991d8cf1d751c7e3ea3edd',
+      email: 'onyinyechukwuma14@gmail.com',
+      amount: 1000000,
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Mobile Number",
+                variable_name: "mobile_number",
+                value: "+2348012345678"
+            }
+         ]
+      },
+      callback: function(response){
+          alert('success. transaction ref is ' + response.reference);
+      },
+      onClose: function(){
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
