@@ -11,15 +11,57 @@
 <body>
         <div class="container">
                 <div class="row">
-                  <h2 class="text-center">
-                    Payroll Sheet
-                  </h2>
+                  <span>
+                    <img src="./money.jpg" alt="Money">
+                  <h2 class="text-center" ><strong>
+                    PAYROLL SHEET
+                  </strong> </h2>
+                  <div class= "tab-2">
+                    <h2 class="regMessage" style="color: brown"></h2>
+                    <h3 class="text-center"><strong>Create New Employee</strong></h3>
+                    <form class="form-details">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" name="name" id="name" placeholder="Name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="position">Position</label>
+                      <select name="position" id="position" class="form-control">
+                        <option value="">--Select Position--</option>
+                        <option value="General Practitioner">General Practitioner</option>
+                        <option value="Consultant">Consultant</option>
+                        <option value="Registered Nurse">Registered Nurse</option>
+                        <option value="Midwife">Midwife</option>
+                        <option value="Front Desk">Front Desk</option>
+                        <option value="Admin/Hr">Admin/Hr</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="HMO Officer">HMO Officer</option>
+                      </select>
+                    </div>
+                
+    
+                    <div class="form-group">
+                            <label for="startDate">Start Date</label>
+                            <input type="date" name="startDate" id="startDate" placeholder="Start Date" class="form-control">
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="salary">Salary</label>
+                            <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control">
+                          </div>
+                          <div class="form-group">
+                            <button class="btn btn-info" id="add">Create</button>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </span>
                   <input id="myInput" type="text" placeholder="Search..">
                  <br><br>
                     <table id="realtime" class="display" width="100%"></table>
         </div>
         <div class="tab-1">
-        <table class="table table-bordered data-table" border="1">
+        <table class="table table-bordered data-table">
          <thead>
             <tr>
                 <th>Name</th>
@@ -35,47 +77,13 @@
             
 
         </table>
+        <form>
+            <script src="https://js.paystack.co/v1/inline.js"></script>
+            <button type="button" onclick="payWithPaystack()"> Pay </button> 
+          </form>
 
     </div>
-        <div class= "tab-2">
-                <h2 class="regMessage" style="color: brown"></h2>
-                <h3 class="text-center"><strong>Create New Employee</strong></h3>
-                <form>
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" id="name" placeholder="Name" class="form-control">
-                </div>
-                <div class="form-group">
-                  <label for="position">Position</label>
-                  <select name="position" id="position" class="form-control">
-                    <option value="">--Select Position--</option>
-                    <option value="General Practitioner">General Practitioner</option>
-                    <option value="Consultant">Consultant</option>
-                    <option value="Registered Nurse">Registered Nurse</option>
-                    <option value="Midwife">Midwife</option>
-                    <option value="Front Desk">Front Desk</option>
-                    <option value="Admin/Hr">Admin/Hr</option>
-                    <option value="Accountant">Accountant</option>
-                    <option value="HMO Officer">HMO Officer</option>
-                  </select>
-                </div>
-            
-
-                <div class="form-group">
-                        <label for="startDate">Start Date</label>
-                        <input type="date" name="startDate" id="startDate" placeholder="Start Date" class="form-control">
-                      </div>
-                      
-                      <div class="form-group">
-                        <label for="salary">Salary</label>
-                        <input type="number" name="salary" id="salary" placeholder="Salary" class="form-control">
-                      </div>
-                      <div class="form-group">
-                        <button class="btn btn-info" id="add">Create</button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
+        
          
     </div>
     <script src="./js/jquery.js"></script>
