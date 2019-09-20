@@ -92,8 +92,8 @@ $("body").on("click", ".btn-update", function(){
 
     $(this).parents("tr").find("td:eq(0)").text(name);
     $(this).parents("tr").find("td:eq(1)").text(position);
-    $(this).parents("tr").find("td:eq(1)").text(startDate);
-    $(this).parents("tr").find("td:eq(1)").text(salary);
+    $(this).parents("tr").find("td:eq(2)").text(startDate);
+    $(this).parents("tr").find("td:eq(3)").text(salary);
  
     $(this).parents("tr").attr('data-name', name);
     $(this).parents("tr").attr('data-position', position);
